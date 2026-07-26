@@ -2,6 +2,57 @@
 import React from 'react';
 import { getAllPosts } from '../../lib/contentful';
 
+const FILTER_GROUPS = [
+  {
+    label: 'Kids',
+    links: [
+      { slug: 'school-learning', name: 'School & Learning' },
+      { slug: 'behavior-confidence', name: 'Behavior & Confidence' },
+      { slug: 'health-nutrition', name: 'Health & Nutrition' },
+    ],
+  },
+  {
+    label: 'Teens',
+    links: [
+      { slug: 'teen-behavior', name: 'Teen Behavior' },
+      { slug: 'study-stress', name: 'Study Stress' },
+      { slug: 'social-media-mental-health', name: 'Social Media & Mental Health' },
+    ],
+  },
+  {
+    label: 'Parenting',
+    links: [
+      { slug: 'positive-parenting', name: 'Positive Parenting' },
+      { slug: 'discipline-boundaries', name: 'Discipline & Boundaries' },
+      { slug: 'parent-teen-communication', name: 'Parent-Teen Communication' },
+    ],
+  },
+  {
+    label: 'Family',
+    links: [
+      { slug: 'relationships', name: 'Relationships' },
+      { slug: 'family-culture-values', name: 'Family Culture & Values' },
+      { slug: 'conflict-resolution', name: 'Conflict Resolution' },
+    ],
+  },
+  {
+    label: 'Health',
+    links: [
+      { slug: 'mental-health', name: 'Mental Health' },
+      { slug: 'sleep-lifestyle', name: 'Sleep & Lifestyle' },
+      { slug: 'nutrition', name: 'Nutrition' },
+    ],
+  },
+  {
+    label: 'Teen Perspectives',
+    links: [
+      { slug: 'wish-parents-knew', name: 'What Teens Wish Parents Knew' },
+      { slug: 'real-teen-stories', name: 'Real Teen Stories' },
+      { slug: 'when-i-was-a-teen', name: 'When I Was a Teen' },
+    ],
+  },
+];
+
 export default async function ArchivePage() {
   const allPosts = await getAllPosts();
 
@@ -64,27 +115,28 @@ export default async function ArchivePage() {
           })}
         </div>
 
-        <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm sticky top-6">
-          <h3 className="text-sm font-bold uppercase tracking-wider text-[#003366] mb-4">
+        <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm sticky top-6 space-y-5 max-h-[calc(100vh-3rem)] overflow-y-auto">
+          <h3 className="text-sm font-bold uppercase tracking-wider text-[#003366]">
             Filter by Section
           </h3>
-          <div className="space-y-2 flex flex-col">
-            <a href="/categories/teen-behavior" className="text-sm font-medium text-slate-600 hover:text-[#009999] p-2 hover:bg-slate-50 rounded-lg transition flex justify-between">
-              <span>Teen Behavior</span>
-            </a>
-            <a href="/categories/social-media-mental-health" className="text-sm font-medium text-slate-600 hover:text-[#009999] p-2 hover:bg-slate-50 rounded-lg transition flex justify-between">
-              <span>Media & Mental Health</span>
-            </a>
-            <a href="/categories/study-stress" className="text-sm font-medium text-slate-600 hover:text-[#009999] p-2 hover:bg-slate-50 rounded-lg transition flex justify-between">
-              <span>Study Stress</span>
-            </a>
-            <a href="/categories/positive-parenting" className="text-sm font-medium text-slate-600 hover:text-[#009999] p-2 hover:bg-slate-50 rounded-lg transition flex justify-between">
-              <span>Positive Parenting</span>
-            </a>
-            <a href="/categories/wish-parents-knew" className="text-sm font-medium text-slate-600 hover:text-[#009999] p-2 hover:bg-slate-50 rounded-lg transition flex justify-between">
-              <span>Teen Perspectives</span>
-            </a>
-          </div>
+          {FILTER_GROUPS.map((group) => (
+            <div key={group.label}>
+              <h4 className="text-xs font-bold uppercase tracking-wide text-slate-400 mb-1">
+                {group.label}
+              </h4>
+              <div className="flex flex-col">
+                {group.links.map((link) => (
+                  <a
+                    key={link.slug}
+                    href={`/categories/${link.slug}`}
+                    className="text-sm font-medium text-slate-600 hover:text-[#009999] p-2 hover:bg-slate-50 rounded-lg transition"
+                  >
+                    {link.name}
+                  </a>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </main>
     </div>
