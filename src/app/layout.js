@@ -50,13 +50,13 @@ export default function RootLayout({ children }) {
                   <a href="/" className="hover:text-[#009999] transition">Home</a>
                 </div>
 
-                {/* Kids Dropdown */}
+                {/* Childhood Realities Dropdown */}
                 <div className="relative group py-5 cursor-pointer">
-                  <span className="hover:text-[#009999] transition">Kids</span>
-                  <div className="absolute top-full left-0 w-56 bg-white border border-slate-100 rounded-xl shadow-xl py-2 hidden group-hover:block normal-case tracking-normal text-sm font-medium">
-                    <a href="/categories/school-learning" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-[#009999] transition">School & Learning</a>
-                    <a href="/categories/behavior-confidence" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-[#009999] transition">Behavior & Confidence</a>
-                    <a href="/categories/health-nutrition" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-[#009999] transition">Health & Nutrition</a>
+                  <span className="hover:text-[#009999] transition whitespace-nowrap">Childhood Realities</span>
+                  <div className="absolute top-full left-0 w-64 bg-white border border-slate-100 rounded-xl shadow-xl py-2 hidden group-hover:block normal-case tracking-normal text-sm font-medium">
+                    <a href="/categories/education-schools" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-[#009999] transition">Education & Schools</a>
+                    <a href="/categories/child-rights-protection" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-[#009999] transition">Child Rights and Protection</a>
+                    <a href="/categories/poverty-inequality" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-[#009999] transition">Poverty & Inequality</a>
                   </div>
                 </div>
 
@@ -83,20 +83,20 @@ export default function RootLayout({ children }) {
                 {/* Family Dropdown */}
                 <div className="relative group py-5 cursor-pointer">
                   <span className="hover:text-[#009999] transition">Family</span>
-                  <div className="absolute top-full left-0 w-56 bg-white border border-slate-100 rounded-xl shadow-xl py-2 hidden group-hover:block normal-case tracking-normal text-sm font-medium">
-                    <a href="/categories/relationships" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-[#009999] transition">Relationships</a>
-                    <a href="/categories/family-culture-values" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-[#009999] transition">Family Culture & Values</a>
-                    <a href="/categories/conflict-resolution" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-[#009999] transition">Conflict Resolution</a>
+                  <div className="absolute top-full left-0 w-64 bg-white border border-slate-100 rounded-xl shadow-xl py-2 hidden group-hover:block normal-case tracking-normal text-sm font-medium">
+                    <a href="/categories/family-dynamics" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-[#009999] transition">Family Dynamics</a>
+                    <a href="/categories/relationships-communication" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-[#009999] transition">Relationships and Communication</a>
+                    <a href="/categories/family-culture-social-influences" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-[#009999] transition">Family Culture & Social Influences</a>
                   </div>
                 </div>
 
                 {/* Health Dropdown */}
                 <div className="relative group py-5 cursor-pointer">
                   <span className="hover:text-[#009999] transition">Health</span>
-                  <div className="absolute top-full left-0 w-56 bg-white border border-slate-100 rounded-xl shadow-xl py-2 hidden group-hover:block normal-case tracking-normal text-sm font-medium">
-                    <a href="/categories/mental-health" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-[#009999] transition">Mental Health</a>
-                    <a href="/categories/sleep-lifestyle" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-[#009999] transition">Sleep & Lifestyle</a>
-                    <a href="/categories/nutrition" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-[#009999] transition">Nutrition</a>
+                  <div className="absolute top-full left-0 w-64 bg-white border border-slate-100 rounded-xl shadow-xl py-2 hidden group-hover:block normal-case tracking-normal text-sm font-medium">
+                    <a href="/categories/mental-emotional-wellbeing" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-[#009999] transition">Mental & Emotional Well-being</a>
+                    <a href="/categories/physical-health-nutrition" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-[#009999] transition">Physical Health & Nutrition</a>
+                    <a href="/categories/healthy-living-prevention" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-[#009999] transition">Healthy Living & Prevention</a>
                   </div>
                 </div>
 
@@ -145,16 +145,16 @@ export default function RootLayout({ children }) {
               <div className="lg:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-1 font-semibold text-sm uppercase tracking-wider text-slate-600 shadow-inner">
                 <a href="/" className="block py-2.5 border-b border-slate-50 hover:text-[#009999]">Home</a>
 
-                {/* Kids Accordion */}
+                {/* Childhood Realities Accordion */}
                 <div>
-                  <button onClick={() => toggleMobileDropdown('kids')} className="w-full text-left py-2.5 border-b border-slate-50 hover:text-[#009999] flex justify-between items-center uppercase font-semibold text-sm tracking-wider text-slate-600">
-                    <span>Kids</span>
+                  <button onClick={() => toggleMobileDropdown('childhood')} className="w-full text-left py-2.5 border-b border-slate-50 hover:text-[#009999] flex justify-between items-center uppercase font-semibold text-sm tracking-wider text-slate-600">
+                    <span>Childhood Realities</span>
                   </button>
-                  {activeMobileDropdown === 'kids' && (
+                  {activeMobileDropdown === 'childhood' && (
                     <div className="pl-4 py-2 space-y-2 normal-case tracking-normal text-slate-500 text-sm font-medium bg-slate-50 rounded-lg mt-1">
-                      <a href="/categories/school-learning" className="block py-1">School & Learning</a>
-                      <a href="/categories/behavior-confidence" className="block py-1">Behavior & Confidence</a>
-                      <a href="/categories/health-nutrition" className="block py-1">Health & Nutrition</a>
+                      <a href="/categories/education-schools" className="block py-1">Education & Schools</a>
+                      <a href="/categories/child-rights-protection" className="block py-1">Child Rights and Protection</a>
+                      <a href="/categories/poverty-inequality" className="block py-1">Poverty & Inequality</a>
                     </div>
                   )}
                 </div>
@@ -194,9 +194,9 @@ export default function RootLayout({ children }) {
                   </button>
                   {activeMobileDropdown === 'family' && (
                     <div className="pl-4 py-2 space-y-2 normal-case tracking-normal text-slate-500 text-sm font-medium bg-slate-50 rounded-lg mt-1">
-                      <a href="/categories/relationships" className="block py-1">Relationships</a>
-                      <a href="/categories/family-culture-values" className="block py-1">Family Culture & Values</a>
-                      <a href="/categories/conflict-resolution" className="block py-1">Conflict Resolution</a>
+                      <a href="/categories/family-dynamics" className="block py-1">Family Dynamics</a>
+                      <a href="/categories/relationships-communication" className="block py-1">Relationships and Communication</a>
+                      <a href="/categories/family-culture-social-influences" className="block py-1">Family Culture & Social Influences</a>
                     </div>
                   )}
                 </div>
@@ -208,9 +208,9 @@ export default function RootLayout({ children }) {
                   </button>
                   {activeMobileDropdown === 'health' && (
                     <div className="pl-4 py-2 space-y-2 normal-case tracking-normal text-slate-500 text-sm font-medium bg-slate-50 rounded-lg mt-1">
-                      <a href="/categories/mental-health" className="block py-1">Mental Health</a>
-                      <a href="/categories/sleep-lifestyle" className="block py-1">Sleep & Lifestyle</a>
-                      <a href="/categories/nutrition" className="block py-1">Nutrition</a>
+                      <a href="/categories/mental-emotional-wellbeing" className="block py-1">Mental & Emotional Well-being</a>
+                      <a href="/categories/physical-health-nutrition" className="block py-1">Physical Health & Nutrition</a>
+                      <a href="/categories/healthy-living-prevention" className="block py-1">Healthy Living & Prevention</a>
                     </div>
                   )}
                 </div>
@@ -279,13 +279,13 @@ export default function RootLayout({ children }) {
               </div>
 
               <div className="flex items-center justify-center gap-5 text-base">
-                <a href="https://www.facebook.com/share/1EV9xyHQUt/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-[#009999] transition">
+                <a href="https://facebook.com/yourpage" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-[#009999] transition">
                   <i className="bi bi-facebook"></i>
                 </a>
-                <a href="https://www.instagram.com/parentandteen_?igsh=MWY0aWdhcTY0YTk5eA==" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-[#009999] transition">
+                <a href="https://instagram.com/yourpage" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-[#009999] transition">
                   <i className="bi bi-instagram"></i>
                 </a>
-                <a href="https://www.linkedin.com/company/parentandteen/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-[#009999] transition">
+                <a href="https://linkedin.com/company/yourpage" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-[#009999] transition">
                   <i className="bi bi-linkedin"></i>
                 </a>
               </div>

@@ -4,11 +4,11 @@ import { getAllPosts } from '../../lib/contentful';
 
 const FILTER_GROUPS = [
   {
-    label: 'Kids',
+    label: 'Childhood Realities',
     links: [
-      { slug: 'school-learning', name: 'School & Learning' },
-      { slug: 'behavior-confidence', name: 'Behavior & Confidence' },
-      { slug: 'health-nutrition', name: 'Health & Nutrition' },
+      { slug: 'education-schools', name: 'Education & Schools' },
+      { slug: 'child-rights-protection', name: 'Child Rights and Protection' },
+      { slug: 'poverty-inequality', name: 'Poverty & Inequality' },
     ],
   },
   {
@@ -30,17 +30,17 @@ const FILTER_GROUPS = [
   {
     label: 'Family',
     links: [
-      { slug: 'relationships', name: 'Relationships' },
-      { slug: 'family-culture-values', name: 'Family Culture & Values' },
-      { slug: 'conflict-resolution', name: 'Conflict Resolution' },
+      { slug: 'family-dynamics', name: 'Family Dynamics' },
+      { slug: 'relationships-communication', name: 'Relationships and Communication' },
+      { slug: 'family-culture-social-influences', name: 'Family Culture & Social Influences' },
     ],
   },
   {
     label: 'Health',
     links: [
-      { slug: 'mental-health', name: 'Mental Health' },
-      { slug: 'sleep-lifestyle', name: 'Sleep & Lifestyle' },
-      { slug: 'nutrition', name: 'Nutrition' },
+      { slug: 'mental-emotional-wellbeing', name: 'Mental & Emotional Well-being' },
+      { slug: 'physical-health-nutrition', name: 'Physical Health & Nutrition' },
+      { slug: 'healthy-living-prevention', name: 'Healthy Living & Prevention' },
     ],
   },
   {
