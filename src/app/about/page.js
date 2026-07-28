@@ -79,7 +79,7 @@ export default function AboutPage() {
               <h4 className="font-bold text-sm text-[#003366] uppercase tracking-wider">Submission Requirements:</h4>
               <ul className="list-disc pl-5 text-sm text-slate-600 space-y-1">
                 <li>Articles must be original, empathetic, and actionable.</li>
-                <li>Length should be between 800 to 1,500 words.</li>
+                <li>No word limit — express yourself however feels right for your story.</li>
                 <li>We highly encourage submissions written directly by teenagers for our <em>Teen Perspectives</em> section.</li>
               </ul>
             </div>
