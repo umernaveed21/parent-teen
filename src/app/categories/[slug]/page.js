@@ -2,6 +2,8 @@
 import React from 'react';
 import { getPostsBySubCategory } from '../../../lib/contentful';
 
+export const revalidate = 60;
+
 const CATEGORY_DICTIONARY = {
   'education-schools': { title: "Education & Schools", parentCat: "Childhood Realities", description: "Exploring how access to quality education, school environments, and learning opportunities shape a child's future and sense of possibility." },
   'child-rights-protection': { title: "Child Rights and Protection", parentCat: "Childhood Realities", description: "Raising awareness about the rights every child deserves, and the protections families and communities must uphold to keep children safe." },

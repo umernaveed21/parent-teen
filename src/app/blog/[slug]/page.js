@@ -3,6 +3,8 @@ import { getPostBySlug } from '../../../lib/contentful';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { richTextOptions } from '../../../lib/richTextRenderer';
 
+export const revalidate = 60;
+
 export default async function ArticlePage({ params }) {
   const resolvedParams = await params;
   const slug = resolvedParams.slug;

@@ -2,6 +2,8 @@
 import React from 'react';
 import { getAllPosts } from '../../lib/contentful';
 
+export const revalidate = 60;
+
 const FILTER_GROUPS = [
   {
     label: 'Childhood Realities',

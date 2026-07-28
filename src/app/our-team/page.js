@@ -1,6 +1,8 @@
 import React from 'react';
 import { getAllAuthors } from '../../lib/contentful';
 
+export const revalidate = 60;
+
 export default async function OurTeamPage() {
   const authors = await getAllAuthors();
 
