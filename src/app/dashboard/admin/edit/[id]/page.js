@@ -1,5 +1,5 @@
 import { currentUser } from '@clerk/nextjs/server';
-import EditPostForm from '../../../../components/EditPostForm';
+import EditPostForm from '../../../../../components/EditPostForm';
 
 export default async function EditArticlePage({ params }) {
   const resolvedParams = await params;
