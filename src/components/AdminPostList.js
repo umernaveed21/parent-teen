@@ -102,6 +102,13 @@ export default function AdminPostList({ posts }) {
                 Preview
               </a>
 
+              <a
+                href={`/dashboard/admin/edit/${post.id}`}
+                className="text-slate-600 hover:text-[#003366] font-bold text-xs uppercase tracking-wider px-4 py-2.5 border border-slate-200 rounded-xl transition hover:bg-slate-50"
+              >
+                Edit
+              </a>
+
               {isLive ? (
                 <button
                   onClick={() => handleUnpublish(post.id)}
