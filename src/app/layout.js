@@ -1,6 +1,7 @@
 'use client';
 
 import { ClerkProvider } from '@clerk/nextjs';
+import { GoogleAnalytics } from '@next/third-parties/google';
 import React, { useState } from 'react';
 import { Inter } from 'next/font/google';
 import './globals.css';
@@ -27,6 +28,7 @@ export default function RootLayout({ children }) {
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
           />
+          <meta name="google-site-verification" content="QLNoJX5bqOFMheMzBHHY21zaaAvYonNVzLCwG9dnVlo" />
         </head>
         <body className={`${inter.className} bg-slate-50 text-slate-800 min-h-screen flex flex-col justify-between`}>
 
@@ -299,6 +301,7 @@ export default function RootLayout({ children }) {
           </footer>
 
         </body>
+        <GoogleAnalytics gaId="G-Z1C69SHN2C" />
       </html>
     </ClerkProvider>
   );

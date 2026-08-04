@@ -12,6 +12,7 @@
     "@clerk/nextjs": "^7.5.20",
     "@contentful/rich-text-react-renderer": "^16.2.1",
     "@contentful/rich-text-types": "^17.2.7",
+    "@next/third-parties": "^16.3.0",
     "@sanity/icons": "^5.0.0",
     "@sanity/image-url": "^2.1.1",
     "@sanity/vision": "^5.31.1",
