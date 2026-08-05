@@ -108,7 +108,7 @@ export async function getAllAuthors() {
       role: fields.role,
       bio: fields.bio,
       shortBio: fields.shortBio,
-      linkedinUrl: fields.linkedinUrl,
+      linkedinUrl: fields.linkedInUrl,
       photoUrl: fields.photo?.fields?.file?.url
         ? `https:${fields.photo.fields.file.url}`
         : null,
