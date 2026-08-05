@@ -25,7 +25,10 @@ export async function getPostBySlug(slug) {
     author: authorRef?.name || fields.author,
     authorRole: authorRef?.role || fields.authorRole,
     authorSlug: authorRef?.slug || null,
-    authorBio: authorRef?.shortBio || authorRef?.bio || null,
+    authorBio: authorRef?.shortBio || authorRef?.bio || fields.guestAuthorBio || null,
+    authorPhotoUrl: authorRef?.photo?.fields?.file?.url
+      ? `https:${authorRef.photo.fields.file.url}`
+      : null,
     date: fields.date,
     readTime: fields.readTime,
     category: fields.category,
@@ -105,7 +108,7 @@ export async function getAllAuthors() {
       role: fields.role,
       bio: fields.bio,
       shortBio: fields.shortBio,
-      linkedinUrl: fields.linkedInUrl,
+      linkedinUrl: fields.linkedinUrl,
       photoUrl: fields.photo?.fields?.file?.url
         ? `https:${fields.photo.fields.file.url}`
         : null,

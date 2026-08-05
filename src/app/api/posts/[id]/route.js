@@ -77,6 +77,7 @@ export async function GET(request, { params }) {
       description: get('description'),
       author: get('author'),
       authorRole: get('authorRole'),
+      guestAuthorBio: get('guestAuthorBio'),
       authorReferenceId,
       subCategory: get('subCategory'),
       content: get('content'),
@@ -115,6 +116,7 @@ export async function PUT(request, { params }) {
     entry.fields.description = { 'en-US': body.description };
     entry.fields.author = { 'en-US': body.author };
     entry.fields.authorRole = { 'en-US': body.authorRole };
+    entry.fields.guestAuthorBio = { 'en-US': body.guestAuthorBio || '' };
     entry.fields.subCategory = { 'en-US': body.subCategory };
     entry.fields.category = { 'en-US': body.category };
     entry.fields.parentCat = { 'en-US': body.parentCat };

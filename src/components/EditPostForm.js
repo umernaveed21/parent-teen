@@ -31,6 +31,7 @@ export default function EditPostForm({ postId }) {
   const [description, setDescription] = useState('');
   const [authorName, setAuthorName] = useState('');
   const [authorRole, setAuthorRole] = useState('');
+  const [guestAuthorBio, setGuestAuthorBio] = useState('');
   const [selectedCategory, setSelectedCategory] = useState(CATEGORY_OPTIONS[0].subCategory);
   const [content, setContent] = useState(null);
   const [coverImage, setCoverImage] = useState(null);
@@ -56,6 +57,7 @@ export default function EditPostForm({ postId }) {
         setDescription(data.description || '');
         setAuthorName(data.author || '');
         setAuthorRole(data.authorRole || '');
+        setGuestAuthorBio(data.guestAuthorBio || '');
         setSelectedCategory(data.subCategory || CATEGORY_OPTIONS[0].subCategory);
         setSelectedAuthorId(data.authorReferenceId || '');
         setCoverImagePreview(data.coverImageUrl || null);
@@ -102,6 +104,7 @@ export default function EditPostForm({ postId }) {
           description,
           author: selectedAuthor ? selectedAuthor.name : authorName,
           authorRole: selectedAuthor ? selectedAuthor.role : authorRole,
+          guestAuthorBio: selectedAuthor ? '' : guestAuthorBio,
           authorReferenceId: selectedAuthorId || null,
           content,
           coverImage,
@@ -191,6 +194,16 @@ export default function EditPostForm({ postId }) {
               type="text"
               value={authorRole}
               onChange={(e) => setAuthorRole(e.target.value)}
+              className="w-full border border-slate-200 rounded-lg px-4 py-2.5 text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#009999]"
+            />
+          </div>
+          <div>
+            <label className="block text-sm font-bold text-[#003366] mb-2">Short Author Bio (optional)</label>
+            <input
+              type="text"
+              value={guestAuthorBio}
+              onChange={(e) => setGuestAuthorBio(e.target.value)}
+              placeholder="A one-line intro shown under the author's name"
               className="w-full border border-slate-200 rounded-lg px-4 py-2.5 text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#009999]"
             />
           </div>

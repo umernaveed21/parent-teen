@@ -3,7 +3,6 @@ import { currentUser } from '@clerk/nextjs/server';
 import { tiptapToContentfulRichText } from '../../../lib/tiptapToContentful';
 
 async function uploadCoverImage(client, spaceId, environmentId, coverImage) {
-  // coverImage.data looks like "data:image/png;base64,iVBORw0KGgo..."
   const matches = coverImage.data.match(/^data:(.+);base64,(.+)$/);
   if (!matches) throw new Error('Invalid image data');
 
@@ -11,13 +10,8 @@ async function uploadCoverImage(client, spaceId, environmentId, coverImage) {
   const base64Data = matches[2];
   const buffer = Buffer.from(base64Data, 'base64');
 
-  // Step 1: upload the raw file bytes
-  const upload = await client.upload.create(
-    { spaceId },
-    { file: buffer }
-  );
+  const upload = await client.upload.create({ spaceId }, { file: buffer });
 
-  // Step 2: create an asset pointing at that upload
   let asset = await client.asset.create(
     { spaceId, environmentId },
     {
@@ -36,17 +30,8 @@ async function uploadCoverImage(client, spaceId, environmentId, coverImage) {
     }
   );
 
-  // Step 3: process the asset (generates the actual public URL)
-  asset = await client.asset.processForAllLocales(
-    { spaceId, environmentId },
-    asset
-  );
-
-  // Step 4: publish the asset so it's publicly accessible
-  asset = await client.asset.publish(
-    { spaceId, environmentId, assetId: asset.sys.id },
-    asset
-  );
+  asset = await client.asset.processForAllLocales({ spaceId, environmentId }, asset);
+  asset = await client.asset.publish({ spaceId, environmentId, assetId: asset.sys.id }, asset);
 
   return asset.sys.id;
 }
@@ -78,6 +63,7 @@ export async function POST(request) {
       description: { 'en-US': body.description },
       author: { 'en-US': body.author },
       authorRole: { 'en-US': body.authorRole },
+      guestAuthorBio: { 'en-US': body.guestAuthorBio || '' },
       date: { 'en-US': new Date().toISOString() },
       readTime: { 'en-US': body.readTime || '5 min read' },
       category: { 'en-US': body.category },
@@ -97,12 +83,13 @@ export async function POST(request) {
     }
 
     if (body.authorReferenceId) {
-  fields.authorReference = {
-    'en-US': {
-      sys: { type: 'Link', linkType: 'Entry', id: body.authorReferenceId },
-    },
-  };
-}
+      fields.authorReference = {
+        'en-US': {
+          sys: { type: 'Link', linkType: 'Entry', id: body.authorReferenceId },
+        },
+      };
+    }
+
     const entry = await client.entry.create(
       { spaceId, environmentId, contentTypeId: 'blogPost' },
       { fields }

@@ -29,7 +29,9 @@ export default function DashboardPage() {
   const { user } = useUser();
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
+  const [authorName, setAuthorName] = useState('');
   const [authorRole, setAuthorRole] = useState('');
+  const [guestAuthorBio, setGuestAuthorBio] = useState('');
   const [selectedCategory, setSelectedCategory] = useState(CATEGORY_OPTIONS[0].subCategory);
   const [content, setContent] = useState(null);
   const [saving, setSaving] = useState(false);
@@ -99,8 +101,9 @@ export default function DashboardPage() {
           title,
           slug: generateSlug(title),
           description,
-          author: selectedAuthor ? selectedAuthor.name : (user?.fullName || user?.primaryEmailAddress?.emailAddress || 'Unknown'),
+          author: selectedAuthor ? selectedAuthor.name : (authorName || user?.fullName || user?.primaryEmailAddress?.emailAddress || 'Unknown'),
           authorRole: selectedAuthor ? selectedAuthor.role : authorRole,
+          guestAuthorBio: selectedAuthor ? '' : guestAuthorBio,
           authorReferenceId: selectedAuthorId || null,
           readTime: calculateReadTime(content),
           content,
@@ -115,7 +118,9 @@ export default function DashboardPage() {
         setMessage('Draft saved successfully! Your team head will review it before publishing.');
         setTitle('');
         setDescription('');
+        setAuthorName('');
         setAuthorRole('');
+        setGuestAuthorBio('');
         setContent(null);
         setCoverImage(null);
         setCoverImagePreview(null);
@@ -180,16 +185,41 @@ export default function DashboardPage() {
           </div>
 
           {!selectedAuthorId && (
-            <div>
-              <label className="block text-sm font-bold text-[#003366] mb-2">Your Role/Title</label>
-              <input
-                type="text"
-                value={authorRole}
-                onChange={(e) => setAuthorRole(e.target.value)}
-                placeholder="e.g. Family Counselor & Child Psychologist"
-                className="w-full border border-slate-200 rounded-lg px-4 py-2.5 text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#009999]"
-              />
-            </div>
+            <>
+              <div>
+                <label className="block text-sm font-bold text-[#003366] mb-2">Author Name</label>
+                <input
+                  type="text"
+                  value={authorName}
+                  onChange={(e) => setAuthorName(e.target.value)}
+                  placeholder="Leave blank to use your account name"
+                  className="w-full border border-slate-200 rounded-lg px-4 py-2.5 text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#009999]"
+                />
+                <p className="text-xs text-slate-400 mt-1">
+                  Useful for guest contributors, like a teen writing under their own name.
+                </p>
+              </div>
+              <div>
+                <label className="block text-sm font-bold text-[#003366] mb-2">Author Role/Title</label>
+                <input
+                  type="text"
+                  value={authorRole}
+                  onChange={(e) => setAuthorRole(e.target.value)}
+                  placeholder="e.g. Family Counselor & Child Psychologist"
+                  className="w-full border border-slate-200 rounded-lg px-4 py-2.5 text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#009999]"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-bold text-[#003366] mb-2">Short Author Bio (optional)</label>
+                <input
+                  type="text"
+                  value={guestAuthorBio}
+                  onChange={(e) => setGuestAuthorBio(e.target.value)}
+                  placeholder="A one-line intro shown under your name"
+                  className="w-full border border-slate-200 rounded-lg px-4 py-2.5 text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#009999]"
+                />
+              </div>
+            </>
           )}
 
           <div>
