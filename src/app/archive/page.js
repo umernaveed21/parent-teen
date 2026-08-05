@@ -2,8 +2,6 @@
 import React from 'react';
 import { getAllPosts } from '../../lib/contentful';
 
-export const revalidate = 60;
-
 const FILTER_GROUPS = [
   {
     label: 'Childhood Realities',
@@ -26,7 +24,7 @@ const FILTER_GROUPS = [
     links: [
       { slug: 'positive-parenting', name: 'Positive Parenting' },
       { slug: 'discipline-boundaries', name: 'Discipline & Boundaries' },
-      { slug: 'parent-teen-communication', name: 'Parent-Teen Communication' },
+      { slug: 'parenting-realities', name: 'Parenting Realities' },
     ],
   },
   {

@@ -2,8 +2,6 @@
 import React from 'react';
 import { getPostsBySubCategory } from '../../../lib/contentful';
 
-export const revalidate = 60;
-
 const CATEGORY_DICTIONARY = {
   'education-schools': { title: "Education & Schools", parentCat: "Childhood Realities", description: "Exploring how access to quality education, school environments, and learning opportunities shape a child's future and sense of possibility." },
   'child-rights-protection': { title: "Child Rights and Protection", parentCat: "Childhood Realities", description: "Raising awareness about the rights every child deserves, and the protections families and communities must uphold to keep children safe." },
@@ -13,7 +11,7 @@ const CATEGORY_DICTIONARY = {
   'social-media-mental-health': { title: "Social Media & Mental Health", parentCat: "Teens", description: "Guiding healthy smartphone boundaries, building digital resilience, and protecting body image against online comparison." },
   'positive-parenting': { title: "Positive Parenting", parentCat: "Parenting", description: "Encouraging positive behaviors, leading with compassion, and building a household centered on unconditional trust." },
   'discipline-boundaries': { title: "Discipline & Boundaries", parentCat: "Parenting", description: "Establishing firm, constructive household guidelines and fair rules that promote mutual respect." },
-  'parent-teen-communication': { title: "Parent-Teen Communication", parentCat: "Parenting", description: "Replacing friction with productive conversations, practicing deep active listening, and keeping communication channels open." },
+  'parenting-realities': { title: "Parenting Realities", parentCat: "Parenting", description: "Replacing friction with productive conversations, practicing deep active listening, and keeping communication channels open." },
   'family-dynamics': { title: "Family Dynamics", parentCat: "Family", description: "Exploring the everyday patterns, roles, and rhythms that shape how a family functions and supports one another." },
   'relationships-communication': { title: "Relationships and Communication", parentCat: "Family", description: "Replacing friction with productive conversations, practicing deep active listening, and keeping communication channels open across the whole family." },
   'family-culture-social-influences': { title: "Family Culture & Social Influences", parentCat: "Family", description: "Understanding how cultural traditions, community expectations, and social pressures shape family life and values." },

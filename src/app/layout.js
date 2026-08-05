@@ -78,7 +78,7 @@ export default function RootLayout({ children }) {
                   <div className="absolute top-full left-0 w-56 bg-white border border-slate-100 rounded-xl shadow-xl py-2 hidden group-hover:block normal-case tracking-normal text-sm font-medium">
                     <a href="/categories/positive-parenting" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-[#009999] transition">Positive Parenting</a>
                     <a href="/categories/discipline-boundaries" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-[#009999] transition">Discipline & Boundaries</a>
-                    <a href="/categories/parent-teen-communication" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-[#009999] transition">Parent-Teen Communication</a>
+                    <a href="/categories/parenting-realities" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-[#009999] transition">Parenting Realities</a>
                   </div>
                 </div>
 
@@ -184,7 +184,7 @@ export default function RootLayout({ children }) {
                     <div className="pl-4 py-2 space-y-2 normal-case tracking-normal text-slate-500 text-sm font-medium bg-slate-50 rounded-lg mt-1">
                       <a href="/categories/positive-parenting" className="block py-1">Positive Parenting</a>
                       <a href="/categories/discipline-boundaries" className="block py-1">Discipline & Boundaries</a>
-                      <a href="/categories/parent-teen-communication" className="block py-1">Parent-Teen Communication</a>
+                      <a href="/categories/parenting-realities" className="block py-1">Parenting Realities</a>
                     </div>
                   )}
                 </div>

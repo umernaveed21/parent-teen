@@ -13,7 +13,7 @@ const CATEGORY_OPTIONS = [
   { subCategory: 'social-media-mental-health', category: 'Social Media & Mental Health', parentCat: 'Teens', subcatName: 'Social Media & Mental Health', subcatLink: 'social-media-mental-health' },
   { subCategory: 'positive-parenting', category: 'Positive Parenting', parentCat: 'Parenting', subcatName: 'Positive Parenting', subcatLink: 'positive-parenting' },
   { subCategory: 'discipline-boundaries', category: 'Discipline & Boundaries', parentCat: 'Parenting', subcatName: 'Discipline & Boundaries', subcatLink: 'discipline-boundaries' },
-  { subCategory: 'parent-teen-communication', category: 'Parent-Teen Communication', parentCat: 'Parenting', subcatName: 'Parent-Teen Communication', subcatLink: 'parent-teen-communication' },
+  { subCategory: 'parenting-realities', category: 'Parenting Realities', parentCat: 'Parenting', subcatName: 'Parenting Realities', subcatLink: 'parenting-realities' },
   { subCategory: 'family-dynamics', category: 'Family Dynamics', parentCat: 'Family', subcatName: 'Family Dynamics', subcatLink: 'family-dynamics' },
   { subCategory: 'relationships-communication', category: 'Relationships and Communication', parentCat: 'Family', subcatName: 'Relationships and Communication', subcatLink: 'relationships-communication' },
   { subCategory: 'family-culture-social-influences', category: 'Family Culture & Social Influences', parentCat: 'Family', subcatName: 'Family Culture & Social Influences', subcatLink: 'family-culture-social-influences' },
