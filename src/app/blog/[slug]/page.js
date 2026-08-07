@@ -5,6 +5,10 @@ import { richTextOptions } from '../../../lib/richTextRenderer';
 
 export const revalidate = 60;
 
+export async function generateStaticParams() {
+  return [];
+}
+
 export default async function ArticlePage({ params }) {
   const resolvedParams = await params;
   const slug = resolvedParams.slug;
@@ -33,9 +37,17 @@ export default async function ArticlePage({ params }) {
 
   const AuthorBox = () => (
     <div className="mt-12 pt-8 border-t border-slate-100 flex flex-col md:flex-row items-start md:items-center space-y-4 md:space-y-0 md:space-x-4 bg-slate-50/60 p-5 rounded-xl border border-slate-100 hover:bg-slate-100/60 transition">
-      <div className="w-12 h-12 rounded-full bg-[#009999] text-white flex items-center justify-center font-black text-lg shadow-sm shrink-0">
-        {article.author.charAt(0)}
-      </div>
+      {article.authorPhotoUrl ? (
+        <img
+          src={article.authorPhotoUrl}
+          alt={article.author}
+          className="w-12 h-12 rounded-full object-cover shadow-sm shrink-0"
+        />
+      ) : (
+        <div className="w-12 h-12 rounded-full bg-[#009999] text-white flex items-center justify-center font-black text-lg shadow-sm shrink-0">
+          {article.author.charAt(0)}
+        </div>
+      )}
       <div>
         <h4 className="text-base font-bold text-[#003366]">{article.author}</h4>
         <p className="text-xs text-[#009999] font-semibold">{article.authorRole}</p>
