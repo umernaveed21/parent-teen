@@ -281,13 +281,13 @@ export default function RootLayout({ children }) {
               </div>
 
               <div className="flex items-center justify-center gap-5 text-base">
-                <a href="https://facebook.com/yourpage" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-[#009999] transition">
+                <a href="https://www.facebook.com/share/1Heq4px7QW/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-[#009999] transition">
                   <i className="bi bi-facebook"></i>
                 </a>
-                <a href="https://instagram.com/yourpage" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-[#009999] transition">
+                <a href="https://www.instagram.com/parentandteen_?igsh=MWY0aWdhcTY0YTk5eA==" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-[#009999] transition">
                   <i className="bi bi-instagram"></i>
                 </a>
-                <a href="https://linkedin.com/company/yourpage" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-[#009999] transition">
+                <a href="https://www.linkedin.com/company/parentandteen/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-[#009999] transition">
                   <i className="bi bi-linkedin"></i>
                 </a>
               </div>
