@@ -16,10 +16,13 @@ export default async function Home() {
           </span>
           <h1 className="text-4xl md:text-5xl font-extrabold mt-4 tracking-tight leading-tight text-[#003366]">
             Parenting, Child Rights, <br />
-            <span style={{ color: '#009999' }}>And Childhood in South Asia.</span>
+            <span style={{ color: '#009999' }}>And Childhood in South Asia</span>
           </h1>
+          <h2 className="text-xl md:text-2xl font-bold mt-4 tracking-tight text-[#003366]">
+            Written for the families who live here
+          </h2>
           <p className="text-lg text-slate-600 mt-4 max-w-xl mx-auto leading-relaxed">
-            A safe space for parents and teenagers to find common ground, share perspectives, and navigate the journey of growing up together.
+            Honest writing about parenting, education, child protection and the inequalities that shape childhood in Pakistan and South Asia, including the children whose work, care and sacrifice go unrecorded. Written by counselors, parents, teachers and teenagers themselves.
           </p>
         </div>
       </section>
