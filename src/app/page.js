@@ -15,8 +15,8 @@ export default async function Home() {
             Every Teen Deserves to Be Heard
           </span>
           <h1 className="text-4xl md:text-5xl font-extrabold mt-4 tracking-tight leading-tight text-[#003366]">
-            Decoding the Teen Years, <br />
-            <span style={{ color: '#009999' }}>One Conversation at a Time.</span>
+            Parenting, Child Rights, <br />
+            <span style={{ color: '#009999' }}>And Childhood in South Asia.</span>
           </h1>
           <p className="text-lg text-slate-600 mt-4 max-w-xl mx-auto leading-relaxed">
             A safe space for parents and teenagers to find common ground, share perspectives, and navigate the journey of growing up together.
