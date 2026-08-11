@@ -9,6 +9,44 @@ export async function generateStaticParams() {
   return [];
 }
 
+export async function generateMetadata({ params }) {
+  const resolvedParams = await params;
+  const article = await getPostBySlug(resolvedParams.slug);
+
+  if (!article) {
+    return {
+      title: 'Article Not Found | ParentAndTeen.com.pk',
+    };
+  }
+
+  const url = `https://www.parentandteen.com.pk/blog/${resolvedParams.slug}`;
+
+  return {
+    title: `${article.title} | ParentAndTeen.com.pk`,
+    description: article.description,
+    alternates: { canonical: url },
+    openGraph: {
+      type: 'article',
+      url,
+      siteName: 'ParentAndTeen.com.pk',
+      title: article.title,
+      description: article.description,
+      publishedTime: article.date,
+      authors: [article.author],
+      images: article.coverImageUrl
+        ? [
+            {
+              url: article.coverImageUrl,
+              width: 1200,
+              height: 630,
+              alt: article.title,
+            },
+          ]
+        : [],
+    },
+  };
+}
+
 export default async function ArticlePage({ params }) {
   const resolvedParams = await params;
   const slug = resolvedParams.slug;
