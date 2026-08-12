@@ -1,7 +1,7 @@
 import { createClient } from 'contentful-management';
 import { currentUser } from '@clerk/nextjs/server';
 import { tiptapToContentfulRichText } from '../../../../lib/tiptapToContentful';
-
+export const maxDuration = 60;
 async function uploadCoverImage(client, spaceId, environmentId, coverImage) {
   const matches = coverImage.data.match(/^data:(.+);base64,(.+)$/);
   if (!matches) throw new Error('Invalid image data');
