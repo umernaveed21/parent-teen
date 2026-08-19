@@ -4,6 +4,20 @@ import { getAllPosts } from '../lib/contentful';
 
 export const revalidate = 60;
 
+export async function generateMetadata() {
+  return {
+    title: 'Parent and Teen South Asia | Parenting, Child Rights & Childhood',
+    description: 'Honest writing about parenting, education, child protection and the inequalities that shape childhood in Pakistan and South Asia. Written by counselors, parents, teachers and teenagers themselves.',
+    openGraph: {
+      type: 'website',
+      url: 'https://www.parentandteen.com.pk',
+      siteName: 'Parent and Teen South Asia',
+      title: 'Parent and Teen South Asia',
+      description: 'Honest writing about parenting, education, child protection and the inequalities that shape childhood in Pakistan and South Asia.',
+    },
+  };
+}
+
 export default async function Home() {
   const blogPosts = await getAllPosts();
 

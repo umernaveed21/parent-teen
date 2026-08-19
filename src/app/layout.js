@@ -29,6 +29,34 @@ export default function RootLayout({ children }) {
             href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
           />
           <meta name="google-site-verification" content="QLNoJX5bqOFMheMzBHHY21zaaAvYonNVzLCwG9dnVlo" />
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                '@context': 'https://schema.org',
+                '@type': 'Organization',
+                name: 'Parent and Teen South Asia',
+                url: 'https://www.parentandteen.com.pk',
+                logo: 'https://www.parentandteen.com.pk/favicon.ico',
+                sameAs: [
+                  'https://www.facebook.com/share/1Heq4px7QW/',
+                  'https://www.instagram.com/parentandteen_?igsh=MWY0aWdhcTY0YTk5eA==',
+                  'https://www.linkedin.com/company/parentandteen/',
+                ],
+              }),
+            }}
+          />
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                '@context': 'https://schema.org',
+                '@type': 'WebSite',
+                name: 'Parent and Teen South Asia',
+                url: 'https://www.parentandteen.com.pk',
+              }),
+            }}
+          />
         </head>
         <body className={`${inter.className} bg-slate-50 text-slate-800 min-h-screen flex flex-col justify-between`}>
 
