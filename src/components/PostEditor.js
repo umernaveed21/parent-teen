@@ -9,7 +9,12 @@ export default function PostEditor({ content, onChange }) {
   const editor = useEditor({
     extensions: [
       StarterKit,
-      Link.configure({ openOnClick: false }),
+      Link.configure({
+        openOnClick: false,
+        autolink: true,
+        linkOnPaste: true,
+        defaultProtocol: 'https',
+      }),
       Image,
     ],
     content: content || '',
