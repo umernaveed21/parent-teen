@@ -21,7 +21,7 @@ export default function EditorialPage() {
           <div>
             <h2 className="text-xl font-bold text-[#003366] mb-3">Culturally Grounded, Not Borrowed</h2>
             <p className="text-slate-600 leading-relaxed text-base">
-              We don't import parenting advice wholesale from Western contexts. Every piece is written with South Asian family structures, extended households, and cultural realities in mind.
+              Every piece is written with South Asian family structures, extended households, and cultural realities in mind.
             </p>
           </div>
 

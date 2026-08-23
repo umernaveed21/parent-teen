@@ -49,7 +49,7 @@ export default function PrivacyPolicyPage() {
           <div>
             <h2 className="text-xl font-bold text-[#003366] mb-3">Children's Privacy</h2>
             <p className="text-slate-600 leading-relaxed text-base">
-              Our content is intended for parents and adult readers. We do not knowingly collect personal information directly from children.
+              We do not knowingly collect personal information directly from children.
             </p>
           </div>
 
