@@ -89,10 +89,6 @@ export default async function PreviewPage({ params }) {
         </div>
       </main>
 
-      <pre className="max-w-4xl mx-auto px-4 mt-8 text-xs bg-slate-900 text-green-400 p-4 rounded-xl overflow-x-auto">
-        {JSON.stringify(get('content'), null, 2)}
-      </pre>
-
       <div className="max-w-4xl mx-auto px-4 mt-8 text-center">
         <a href="/dashboard/admin" className="text-sm font-semibold text-[#009999] hover:underline">
           &larr; Back to Review & Publish

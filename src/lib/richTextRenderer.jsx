@@ -24,14 +24,14 @@ export const richTextOptions = {
       </blockquote>
     ),
     [INLINES.HYPERLINK]: (node, children) => (
-  <a>
-    href={node.data.uri}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="text-[#009999] underline hover:text-[#008080]"
-  
-    {children}
-  </a>
-),
+      <a
+        href={node.data.uri}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-[#009999] underline hover:text-[#008080]"
+      >
+        {children}
+      </a>
+    ),
   },
 };
