@@ -2,6 +2,7 @@ import React from 'react';
 import { getPostBySlug } from '../../../lib/contentful';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { richTextOptions } from '../../../lib/richTextRenderer';
+import ShareButton from '../../../components/ShareButton';
 
 export const revalidate = 60;
 
@@ -73,6 +74,8 @@ export default async function ArticlePage({ params }) {
     ? new Date(article.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })
     : '';
 
+  const articleUrl = `https://www.parentandteen.com.pk/blog/${slug}`;
+
   const AuthorBox = () => (
     <div className="mt-12 pt-8 border-t border-slate-100 flex flex-col md:flex-row items-start md:items-center space-y-4 md:space-y-0 md:space-x-4 bg-slate-50/60 p-5 rounded-xl border border-slate-100 hover:bg-slate-100/60 transition">
       {article.authorPhotoUrl ? (
@@ -137,6 +140,10 @@ export default async function ArticlePage({ params }) {
             </svg>
             <span>{article.readTime}</span>
           </span>
+        </div>
+
+        <div className="mt-4">
+          <ShareButton title={article.title} url={articleUrl} />
         </div>
       </header>
 
