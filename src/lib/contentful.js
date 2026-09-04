@@ -23,7 +23,7 @@ export async function getPostBySlug(slug) {
     slug: fields.slug,
     description: fields.description,
     author: authorRef?.name || fields.author,
-    authorRole: authorRef?.role || fields.authorRole,
+    authorRole: authorRef?.role || fields.authorRoleExtended || fields.authorRole,
     authorSlug: authorRef?.slug || null,
     authorBio: authorRef?.shortBio || authorRef?.bio || fields.guestAuthorBio || null,
     authorPhotoUrl: authorRef?.photo?.fields?.file?.url

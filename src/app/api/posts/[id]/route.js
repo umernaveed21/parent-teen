@@ -76,7 +76,7 @@ export async function GET(request, { params }) {
       title: get('title'),
       description: get('description'),
       author: get('author'),
-      authorRole: get('authorRole'),
+      authorRole: get('authorRoleExtended') || get('authorRole'),
       guestAuthorBio: get('guestAuthorBio'),
       authorReferenceId,
       subCategory: get('subCategory'),
@@ -115,7 +115,8 @@ export async function PUT(request, { params }) {
     entry.fields.title = { 'en-US': body.title };
     entry.fields.description = { 'en-US': body.description };
     entry.fields.author = { 'en-US': body.author };
-    entry.fields.authorRole = { 'en-US': body.authorRole };
+    entry.fields.authorRole = { 'en-US': body.authorRole || '' };
+    entry.fields.authorRoleExtended = { 'en-US': body.authorRoleExtended || '' };
     entry.fields.guestAuthorBio = { 'en-US': body.guestAuthorBio || '' };
     entry.fields.subCategory = { 'en-US': body.subCategory };
     entry.fields.category = { 'en-US': body.category };

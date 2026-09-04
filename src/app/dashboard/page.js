@@ -102,7 +102,8 @@ export default function DashboardPage() {
           slug: generateSlug(title),
           description,
           author: selectedAuthor ? selectedAuthor.name : (authorName || user?.fullName || user?.primaryEmailAddress?.emailAddress || 'Unknown'),
-          authorRole: selectedAuthor ? selectedAuthor.role : authorRole,
+          authorRole: selectedAuthor ? selectedAuthor.role : '',
+          authorRoleExtended: selectedAuthor ? '' : authorRole,
           guestAuthorBio: selectedAuthor ? '' : guestAuthorBio,
           authorReferenceId: selectedAuthorId || null,
           readTime: calculateReadTime(content),
@@ -196,18 +197,21 @@ export default function DashboardPage() {
                   className="w-full border border-slate-200 rounded-lg px-4 py-2.5 text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#009999]"
                 />
                 <p className="text-xs text-slate-400 mt-1">
-                  Useful for guest contributors, like a teen writing under their own name.
+                  Useful for guest contributors, like a teen writing under their own name, or a professor's full credentials.
                 </p>
               </div>
               <div>
                 <label className="block text-sm font-bold text-[#003366] mb-2">Author Role/Title</label>
-                <input
-                  type="text"
+                <textarea
                   value={authorRole}
                   onChange={(e) => setAuthorRole(e.target.value)}
-                  placeholder="e.g. Family Counselor & Child Psychologist"
+                  placeholder="e.g. Professor of Developmental Psychology, XYZ University, PhD in Child Development"
+                  rows={2}
                   className="w-full border border-slate-200 rounded-lg px-4 py-2.5 text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#009999]"
                 />
+                <p className="text-xs text-slate-400 mt-1">
+                  Room for full credentials, titles, and affiliations.
+                </p>
               </div>
               <div>
                 <label className="block text-sm font-bold text-[#003366] mb-2">Short Author Bio (optional)</label>

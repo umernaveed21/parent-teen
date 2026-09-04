@@ -103,7 +103,8 @@ export default function EditPostForm({ postId }) {
           title,
           description,
           author: selectedAuthor ? selectedAuthor.name : authorName,
-          authorRole: selectedAuthor ? selectedAuthor.role : authorRole,
+          authorRole: selectedAuthor ? selectedAuthor.role : '',
+          authorRoleExtended: selectedAuthor ? '' : authorRole,
           guestAuthorBio: selectedAuthor ? '' : guestAuthorBio,
           authorReferenceId: selectedAuthorId || null,
           content,
@@ -190,12 +191,16 @@ export default function EditPostForm({ postId }) {
           </div>
           <div>
             <label className="block text-sm font-bold text-[#003366] mb-2">Author Role/Title</label>
-            <input
-              type="text"
+            <textarea
               value={authorRole}
               onChange={(e) => setAuthorRole(e.target.value)}
+              rows={2}
+              placeholder="e.g. Professor of Developmental Psychology, XYZ University, PhD in Child Development"
               className="w-full border border-slate-200 rounded-lg px-4 py-2.5 text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#009999]"
             />
+            <p className="text-xs text-slate-400 mt-1">
+              Room for full credentials, titles, and affiliations.
+            </p>
           </div>
           <div>
             <label className="block text-sm font-bold text-[#003366] mb-2">Short Author Bio (optional)</label>
