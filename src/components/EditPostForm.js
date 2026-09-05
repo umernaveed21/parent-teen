@@ -16,7 +16,7 @@ const CATEGORY_OPTIONS = [
   { subCategory: 'parenting-realities', category: 'Parenting Realities', parentCat: 'Parenting', subcatName: 'Parenting Realities', subcatLink: 'parenting-realities' },
   { subCategory: 'family-dynamics', category: 'Family Dynamics', parentCat: 'Family', subcatName: 'Family Dynamics', subcatLink: 'family-dynamics' },
   { subCategory: 'relationships-communication', category: 'Relationships and Communication', parentCat: 'Family', subcatName: 'Relationships and Communication', subcatLink: 'relationships-communication' },
-  { subCategory: 'family-culture-social-influences', category: 'Family Culture & Social Influences', parentCat: 'Family', subcatName: 'Family Culture & Social Influences', subcatLink: 'family-culture-social-influences' },
+  { subCategory: 'dysfunctional-marriages', category: 'Dysfunctional Marriages', parentCat: 'Family', subcatName: 'Dysfunctional Marriages', subcatLink: 'dysfunctional-marriages' },
   { subCategory: 'mental-emotional-wellbeing', category: 'Mental & Emotional Well-being', parentCat: 'Health', subcatName: 'Mental & Emotional Well-being', subcatLink: 'mental-emotional-wellbeing' },
   { subCategory: 'physical-health-nutrition', category: 'Physical Health & Nutrition', parentCat: 'Health', subcatName: 'Physical Health & Nutrition', subcatLink: 'physical-health-nutrition' },
   { subCategory: 'healthy-living-prevention', category: 'Healthy Living & Prevention', parentCat: 'Health', subcatName: 'Healthy Living & Prevention', subcatLink: 'healthy-living-prevention' },

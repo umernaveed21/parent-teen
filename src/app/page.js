@@ -19,7 +19,8 @@ export async function generateMetadata() {
 }
 
 export default async function Home() {
-  const blogPosts = await getAllPosts();
+  const allPosts = await getAllPosts();
+  const blogPosts = allPosts.slice(0, 6);
 
   return (
     <div>

@@ -116,7 +116,7 @@ export default function RootLayout({ children }) {
                   <div className="absolute top-full left-0 w-64 bg-white border border-slate-100 rounded-xl shadow-xl py-2 hidden group-hover:block normal-case tracking-normal text-sm font-medium">
                     <a href="/categories/family-dynamics" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-[#009999] transition">Family Dynamics</a>
                     <a href="/categories/relationships-communication" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-[#009999] transition">Relationships and Communication</a>
-                    <a href="/categories/family-culture-social-influences" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-[#009999] transition">Family Culture & Social Influences</a>
+                    <a href="/categories/dysfunctional-marriages" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-[#009999] transition">Dysfunctional Marriages</a>
                   </div>
                 </div>
 
@@ -226,7 +226,7 @@ export default function RootLayout({ children }) {
                     <div className="pl-4 py-2 space-y-2 normal-case tracking-normal text-slate-500 text-sm font-medium bg-slate-50 rounded-lg mt-1">
                       <a href="/categories/family-dynamics" className="block py-1">Family Dynamics</a>
                       <a href="/categories/relationships-communication" className="block py-1">Relationships and Communication</a>
-                      <a href="/categories/family-culture-social-influences" className="block py-1">Family Culture & Social Influences</a>
+                      <a href="/categories/dysfunctional-marriages" className="block py-1">Dysfunctional Marriages</a>
                     </div>
                   )}
                 </div>
