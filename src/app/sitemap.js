@@ -12,13 +12,13 @@ const CATEGORY_SLUGS = [
   'parenting-realities',
   'family-dynamics',
   'relationships-communication',
-  'family-culture-social-influences',
+  'dysfunctional-marriages',
   'mental-emotional-wellbeing',
   'physical-health-nutrition',
   'healthy-living-prevention',
   'wish-parents-knew',
   'real-teen-stories',
-  'when-i-was-a-teen',
+  'when-i-was-a-child',
 ];
 
 export default async function sitemap() {

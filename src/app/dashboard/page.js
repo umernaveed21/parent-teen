@@ -22,7 +22,7 @@ const CATEGORY_OPTIONS = [
   { subCategory: 'healthy-living-prevention', category: 'Healthy Living & Prevention', parentCat: 'Health', subcatName: 'Healthy Living & Prevention', subcatLink: 'healthy-living-prevention' },
   { subCategory: 'wish-parents-knew', category: 'Teen Perspectives', parentCat: 'Teen Perspectives', subcatName: 'What Teens Wish Parents Knew', subcatLink: 'wish-parents-knew' },
   { subCategory: 'real-teen-stories', category: 'Teen Perspectives', parentCat: 'Teen Perspectives', subcatName: 'Real Teen Stories', subcatLink: 'real-teen-stories' },
-  { subCategory: 'when-i-was-a-teen', category: 'Teen Perspectives', parentCat: 'Teen Perspectives', subcatName: 'When I Was a Teen', subcatLink: 'when-i-was-a-teen' },
+  { subCategory: 'when-i-was-a-child', category: 'Teen Perspectives', parentCat: 'Teen Perspectives', subcatName: 'When I Was a Child', subcatLink: 'when-i-was-a-child' },
 ];
 
 export default function DashboardPage() {

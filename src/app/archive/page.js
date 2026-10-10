@@ -48,7 +48,7 @@ const FILTER_GROUPS = [
     links: [
       { slug: 'wish-parents-knew', name: 'What Teens Wish Parents Knew' },
       { slug: 'real-teen-stories', name: 'Real Teen Stories' },
-      { slug: 'when-i-was-a-teen', name: 'When I Was a Teen' },
+      { slug: 'when-i-was-a-child', name: 'When I Was a Child' },
     ],
   },
 ];

@@ -136,7 +136,7 @@ export default function RootLayout({ children }) {
                   <div className="absolute top-full left-0 w-64 bg-white border border-slate-100 rounded-xl shadow-xl py-2 hidden group-hover:block normal-case tracking-normal text-sm font-medium">
                     <a href="/categories/wish-parents-knew" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-[#009999] transition">What Teens Wish Parents Knew</a>
                     <a href="/categories/real-teen-stories" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-[#009999] transition">Real Teen Stories</a>
-                    <a href="/categories/when-i-was-a-teen" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-[#009999] transition">When I Was a Teen</a>
+                    <a href="/categories/when-i-was-a-child" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-[#009999] transition">When I Was a Child</a>
                   </div>
                 </div>
 
@@ -254,7 +254,7 @@ export default function RootLayout({ children }) {
                     <div className="pl-4 py-2 space-y-2 normal-case tracking-normal text-slate-500 text-sm font-medium bg-slate-50 rounded-lg mt-1">
                       <a href="/categories/wish-parents-knew" className="block py-1">What Teens Wish Parents Knew</a>
                       <a href="/categories/real-teen-stories" className="block py-1">Real Teen Stories</a>
-                      <a href="/categories/when-i-was-a-teen" className="block py-1">When I Was a Teen</a>
+                      <a href="/categories/when-i-was-a-child" className="block py-1">When I Was a Child</a>
                     </div>
                   )}
                 </div>

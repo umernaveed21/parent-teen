@@ -26,7 +26,7 @@ const CATEGORY_DICTIONARY = {
   'healthy-living-prevention': { title: "Healthy Living & Prevention", parentCat: "Health", description: "Building preventive care habits and active daily routines that support long-term wellbeing, strengthen health, and help reduce the risk of disease." },
   'wish-parents-knew': { title: "What Teens Wish Parents Knew", parentCat: "Teen Perspectives", description: "An open look into what your children say about their privacy boundaries, hidden pressures, and unvoiced expectations." },
   'real-teen-stories': { title: "Real Teen Stories", parentCat: "Teen Perspectives", description: "A collection of unfiltered, personal essays and reflections written directly by teenagers about their lived experiences." },
-  'when-i-was-a-teen': { title: "When I Was a Teen", parentCat: "Teen Perspectives", description: "Direct feedback from teens highlighting where they feel most supported, misunderstood, or validated by their families." }
+  'when-i-was-a-child': { title: "When I Was a Child", parentCat: "Teen Perspectives", description: "Adults look back on their own childhoods, and on what those years taught them about family, fear, love, and the way they raise children today." }
 };
 
 export default async function CategoryPage({ params }) {
