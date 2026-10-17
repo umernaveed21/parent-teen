@@ -96,7 +96,7 @@ export default async function ArchivePage() {
                   )}
                   <div className="space-y-2">
                     <span className="text-xs font-bold text-[#009999] tracking-wide uppercase">
-                      {post.category}
+                      {post.subcatName || post.category}
                     </span>
                     <h3 className="text-xl font-bold text-[#003366] group-hover:text-[#009999] transition-colors duration-300 leading-snug">
                       {post.title}

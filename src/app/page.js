@@ -63,7 +63,7 @@ export default async function Home() {
                     <img src={post.coverImageUrl} alt={post.title} className="w-full h-44 object-cover rounded-xl mb-4" />
                   )}
                   <span className="text-xs font-bold text-[#009999] tracking-wide uppercase bg-teal-50/60 border border-teal-100/80 px-2.5 py-1 rounded-md inline-block">
-                    {post.category}
+                    {post.subcatName || post.category}
                   </span>
                   <h3 className="text-xl font-bold text-[#003366] mt-4 leading-snug group-hover:text-[#009999] transition-colors duration-300">
                     {post.title}

@@ -60,6 +60,7 @@ export async function getAllPosts() {
       readTime: fields.readTime,
       category: fields.category,
       subCategory: fields.subCategory,
+      subcatName: fields.subcatName,
       coverImageUrl: fields.coverImage?.fields?.file?.url
         ? `https:${fields.coverImage.fields.file.url}`
         : null,
@@ -85,6 +86,7 @@ export async function getPostsBySubCategory(subCategorySlug) {
       readTime: fields.readTime,
       category: fields.category,
       subCategory: fields.subCategory,
+      subcatName: fields.subcatName,
       coverImageUrl: fields.coverImage?.fields?.file?.url
         ? `https:${fields.coverImage.fields.file.url}`
         : null,
